@@ -9,8 +9,6 @@ import concurrent.futures
 
 class InterfaceEC():
     def __init__(self, pop_size, m, api_endpoint, api_key, llm_model,llm_use_local,llm_local_url, debug_mode, interface_prob, select,n_p,timeout,use_numba,**kwargs):
-        print(api_key)
-        print(api_endpoint)
         # LLM settings
         self.pop_size = pop_size
         self.interface_eval = interface_prob

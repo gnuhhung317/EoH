@@ -174,7 +174,8 @@ class EOH:
             # Save the best one to a file
             filename = self.output_path + "/results/pops_best/population_generation_" + str(pop + 1) + ".json"
             with open(filename, 'w') as f:
-                json.dump(population[0], f, indent=5)
+                if (len(population)>0): 
+                    json.dump(population[0], f, indent=5)
 
 
             print(f"--- {pop + 1} of {self.n_pop} populations finished. Time Cost:  {((time.time()-time_start)/60):.1f} m")
