@@ -11,7 +11,7 @@ class InterfaceAPI:
         self.debug_mode = debug_mode
         self.n_trial = 5
         if(self.model_LLM.startswith('gemini')):
-            self.client = genai.Client(api_key=self.model_LLM)
+            self.client = genai.Client(api_key=self.api_key)
 
     def get_response(self, prompt_content):
         if(self.model_LLM.startswith('gemini')):
